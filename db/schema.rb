@@ -11,19 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150517183012) do
+ActiveRecord::Schema.define(version: 20150517185806) do
 
   create_table "accounts", force: :cascade do |t|
     t.float    "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
+
+  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id"
 
   create_table "bids", force: :cascade do |t|
     t.float    "bid_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "golfer_id"
+    t.integer  "user_id"
   end
+
+  add_index "bids", ["golfer_id"], name: "index_bids_on_golfer_id"
+  add_index "bids", ["user_id"], name: "index_bids_on_user_id"
 
   create_table "golfers", force: :cascade do |t|
     t.string   "name"
