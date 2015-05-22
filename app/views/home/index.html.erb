@@ -1,2 +1,24 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<br/>
+<div class="jumbotron">
+  <h1>Calcutta 1.0</h1>
+  <p>Golf Auction</p>
+  <p>
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> 
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Bid on Golfers as you would in any online auction</h2>
+    <p>Bids increase in 25 point increments</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Auctions close on a rolling 5 minute basis, beginning 3pm the day before tournament play begins</h2>
+    <p>The auction for the lowest ranked golfer ends first, and the auction process culminates with the highest rated golfer in the field.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Bid on Players that will do well</h2>
+    <p>The lowest round for each day will win 5% of the point pool.  The tournament winner wins 50% of the point pool, second place wins 20%, and third place wins 10%</p>
+  </div>
+</div>
